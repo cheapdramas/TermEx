@@ -6,3 +6,6 @@ d = delete file
 enter = cd into directory/ edit file in vim
 b = cd ..
 a = add new file\directory
+
+
+gcc explorer.c -lncurses
