@@ -6,7 +6,7 @@
   
 
 ## Compile and Run
-- gcc explorer.c -lncurses -o explorer.
+- gcc explorer.c -lncurses -o explorer
 - idk i still can not write makefiles
 
 ## Keybindings
