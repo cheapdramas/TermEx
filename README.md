@@ -1,7 +1,9 @@
 ## Dependencies
+- `Linux` 😅
 - `ncursesw`
 - `mv` moving
 - `fzf` for searching
+  
 
 ## Compile and Run
 - gcc explorer.c -lncurses -o explorer.
