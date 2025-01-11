@@ -8,6 +8,8 @@
 - idk i still can not write makefiles
 
 ## Keybindings
+| Key | Function |
+|:---:| --- |
 | <kbd>Arrows</kbd> | Navigation keys |
 | <kbd>Enter</kbd> | Entry selected file(vim)\ Change directory |
 | <kbd>b</kbd> | Back into parent directory |
