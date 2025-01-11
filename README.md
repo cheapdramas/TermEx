@@ -1,11 +1,19 @@
-who cares?
+## Dependencies
+- `ncursesw`
+- `mv` moving
+- `fzf` for searching
 
+## Compile and Run
+- gcc explorer.c -lncurses -o explorer.
+- idk i still can not write makefiles
 
-arrows to switch beetwen items
-d = delete file
-enter = cd into directory/ edit file in vim
-b = cd ..
-a = add new file\directory
+## Keybindings
+| <kbd>Arrows</kbd> | Navigation keys |
+| <kbd>Enter</kbd> | Entry selected file(vim)\ Change directory |
+| <kbd>b</kbd> | Back into parent directory |
+| <kbd>f</kbd> | Search using fzf |
+| <kbd>d</kbd> | Delete selected file |
+| <kbd>a</kbd> | Create new file\directory |
+| <kbd>t</kbd> | Execute command in terminal |
+| <kbd>q</kbd> | Quit |
 
-
-gcc explorer.c -lncurses
