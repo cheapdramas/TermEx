@@ -12,13 +12,13 @@ CFLAGS = -lncurses
 all: $(APP_NAME)
 
 $(APP_NAME): $(SRC)
-	@echo "Компилируем $(APP_NAME)..."
 	$(CC) $(SRC) $(CFLAGS) -o $(APP_NAME)
 
 
 install: $(APP_NAME)
 	sudo apt-get update
 	sudo apt-get install -y libncurses5-dev libncursesw5-dev
+	sudo apt-get install fzf
 	sudo cp $(APP_NAME) $(INSTALL_DIR)
 
 uninstall:
