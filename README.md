@@ -10,11 +10,12 @@ Compile:
 
     make
 
-Run
+Install:
 
     sudo make install
+Run application:
 
-to install.
+    termex
 
 ## Keybindings
 | Key | Function |
