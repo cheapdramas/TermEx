@@ -6,16 +6,17 @@
   
 
 ## Compile and run
-Compile:
-
-    make
-
-Install:
-
-    sudo make install
-Run application:
-
-    termex
+Ubuntu:
+  Compile:
+  
+      make
+  
+  Install:
+  
+      sudo make install
+  Run application:
+  
+      termex
 
 ## Keybindings
 | Key | Function |
