@@ -5,20 +5,17 @@
 - `fzf` for searching
   
 
-## Compile and run
-Ubuntu:
+## Compiling and Installation
+#### Ubuntu/Debian
+To compile, run
 
+    make
 
-  Compile:
-  
-      make
-  
-  Install:
-  
-      sudo make install
-  Run application:
-  
-      termex
+and then run,
+
+    sudo make install
+
+to install.
 
 ## Keybindings
 | Key | Function |
