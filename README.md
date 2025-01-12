@@ -17,6 +17,16 @@ and then run,
 
 to install.
 
+Run app:
+
+    termex
+#### Others
+Idk??
+
+    install ncurses,fzf yourself
+    gcc explorer.c -lncurses -o termex
+    
+
 ## Keybindings
 | Key | Function |
 |:---:| --- |
