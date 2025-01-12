@@ -5,10 +5,12 @@
 - `fzf` for searching
   
 
-## Compile and Run
-- make
-- sudo make install
-
+## Compile and run
+Compile:
+    make
+Run:
+    sudo make install
+  for installation
 
 ## Keybindings
 | Key | Function |
