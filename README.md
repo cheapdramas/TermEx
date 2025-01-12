@@ -7,10 +7,14 @@
 
 ## Compile and run
 Compile:
+
     make
-Run:
+
+Run
+
     sudo make install
-  for installation
+
+to install.
 
 ## Keybindings
 | Key | Function |
