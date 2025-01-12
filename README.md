@@ -1,5 +1,5 @@
 # Showcase
-![](https://github.com/cheapdramas/TermEx/simple-demo.gif)
+![](/simple-demo.gif)
 
      Me editing my statusline in lunarvim config
 
