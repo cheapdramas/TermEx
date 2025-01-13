@@ -2,8 +2,10 @@
 ![](/simple-demo.gif)
 
      Me editing my statusline in lunarvim config
+     
+![](/helloworld.gif)
 
-
+     Creating crystal hello world app
 ## Dependencies
 - `Linux` 😅
 - `ncursesw`
