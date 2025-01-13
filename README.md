@@ -2,6 +2,11 @@
 ![](/simple-demo.gif)
 
      Me editing my statusline in lunarvim config
+
+
+
+
+     
      
 ![](/helloworld.gif)
 
