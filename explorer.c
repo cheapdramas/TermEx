@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <locale.h>
 
 // fileactions
 // d = delete
@@ -306,6 +307,7 @@ void user_controls(
 
 int main()
 {
+  setlocale(LC_CTYPE, "");
   // screen related
   initscr();
   curs_set(0);
