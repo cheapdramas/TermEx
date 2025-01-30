@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <locale.h>
-
 // fileactions
 // d = delete
 // e = enter
@@ -54,6 +53,42 @@ void file_control(
     // if entry is not . and .. dir,than:
     if (strcmp(filename, ".") && strcmp(filename, ".."))
     {
+
+      if (strcmp(*fileaction,"r") == 0){
+        if (strcmp(filename,file_name)==0){
+          *fileaction = "";
+        }
+      
+
+        if (*highlight == iterator)
+        {
+          printw("%s",file_name);
+          
+          *fileaction = "";
+          char * syscall = malloc( sizeof(char) * (5 + (sizeof(char) * strlen(filename)) + (sizeof(char) * strlen(file_name))));
+          snprintf(syscall,strlen(file_name) + strlen(filename) + 6,"mv %s %s",filename,file_name);
+         
+          system(syscall);
+          free(syscall);
+          nodelay(stdscr, true);
+          break;
+
+        }
+
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
       // clearing files at the top
       if (iterator > *do_not_show)
       {
@@ -65,6 +100,9 @@ void file_control(
             attron(A_REVERSE);
           }
           mvprintw(iterator + (-1 * (*do_not_show)), 1, "%s  %s", filetype, filename);
+
+          //russian text expiriment
+            
           attroff(A_REVERSE);
           refresh();
         }
@@ -77,6 +115,7 @@ void file_control(
           remove(filename);
           *fileaction = "";
           clear();
+          refresh();
           nodelay(stdscr, true);
           if (*highlight > 0)
           {
@@ -136,6 +175,7 @@ void file_control(
           nodelay(stdscr, true);
           clear();
           refresh();
+          *fileaction = "";
         }
       }
 
@@ -268,20 +308,36 @@ void user_controls(
 
   if (user_input == *"d")
   {
-    printw("\nDelete ? (y | n): \n");
-    int confirm = getch();
-    echo();
-    if (confirm == *"y")
-    {
-      *fileaction = "d";
+    if (dirlen > 0){
+      printw("\nDelete ? (y | n) : \n");
+      int confirm = getch();
+      echo();
+      if (confirm == *"y")
+      {
+        *fileaction = "d";
+      }
       clear();
+      refresh();
+      noecho();
     }
-    else
-    {
-      clear();
-    }
-    noecho();
   }
+  if (user_input == *"r")
+  {
+    *fileaction = "r"; 
+    printw("\nNew file name:\n");
+    echo();
+    *file_name = malloc(PATH_MAX); 
+    scanw("%s", *file_name);
+    clear();
+    refresh();
+
+
+    noecho();
+
+
+  }
+
+
 
   if (user_input == *"t")
   {
@@ -292,6 +348,7 @@ void user_controls(
     def_prog_mode();
     endwin();
     system(terminal_command);
+    getch();
     refresh();
     clear();
 
@@ -328,6 +385,7 @@ int main()
   while (1)
   {
     getmaxyx(stdscr, maxY, maxX);
+    refresh();
 
     file_control(
         &highlight,
