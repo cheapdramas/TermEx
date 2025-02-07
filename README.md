@@ -1,5 +1,5 @@
 
-this shi is NOT safe
+this shi is NOT safe (rewriting all of the code rn) 
 # Showcase
 ![](/simple-demo.gif)
 
